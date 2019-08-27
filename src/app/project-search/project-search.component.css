@@ -1,0 +1,21 @@
+.example-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 350px;
+  font-family: 'Quattrocento Sans',sans-serif !important;
+}
+
+.example-header {
+  min-height: 65px;
+  padding: 5px 18px 0;
+}
+
+.mat-form-field {
+  font-size: 18px;
+  width: 100%;
+}
+  
+  .mat-table {
+    overflow: auto;
+    max-height: 500px;
+  }
