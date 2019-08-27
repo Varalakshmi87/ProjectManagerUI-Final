@@ -1,13 +1,13 @@
 <ng-template #content>
-  <button type="submit" mat-button mat-raised-button class="mr-2" value="createTask.TaskId" color="primary">
+  <button type="submit" mat-button mat-raised-button class="mr-2" value="createTask.TaskID" color="primary">
     <mat-icon>{{'add'}}</mat-icon>Add Task</button>
-  <button type="button" mat-button mat-raised-button value="createTask.TaskId" (click)="Reset();CreateTask.resetForm()" color="accent">
+  <button type="button" mat-button mat-raised-button value="createTask.TaskID" (click)="Reset();CreateTask.resetForm()" color="accent">
     <mat-icon>{{'clear'}}</mat-icon>Reset</button>
 </ng-template>
 <ng-template #other_content>
-  <button type="submit" mat-button mat-raised-button class="mr-2" value="createTask.TaskId" color="primary">
+  <button type="submit" mat-button mat-raised-button class="mr-2" value="createTask.TaskID" color="primary">
     <mat-icon>{{'add'}}</mat-icon>Update Task</button>
-  <button type="button" mat-button mat-raised-button value="createTask.TaskId" (click)="Reset();CreateTask.resetForm()" color="warn">
+  <button type="button" mat-button mat-raised-button value="createTask.TaskID" (click)="Reset();CreateTask.resetForm()" color="warn">
     <mat-icon>{{'cancel'}}</mat-icon>Cancel</button>
 </ng-template>
 <div class="example-container">
@@ -33,7 +33,7 @@
           </button>
           <mat-form-field class="example-full-width">
             <input required matInput #Task="ngModel" placeholder="Task Name" name="Task" [(ngModel)]="createTask.Task">
-            <input type="hidden" [(ngModel)]="createTask.TaskId" name="TaskId">
+            <input type="hidden" [(ngModel)]="createTask.TaskID" name="TaskID">
             <mat-error>
               Task Name is
               <strong>required</strong>
@@ -135,7 +135,7 @@
                 <div class="row" *ngIf="!taskitem.IsTaskEnded">
                   <button mat-raised-button color="primary" class="col-md-3" (click)="editTask(taskitem,taskitem.ParentTask,taskitem.Project,taskitem.Users)">
                     <mat-icon>edit</mat-icon> Edit</button>
-                  <button mat-raised-button color="warn" class="col-md-4 ml-1" (click)="endTask(taskitem.TaskId)">
+                  <button mat-raised-button color="warn" class="col-md-4 ml-1" (click)="endTask(taskitem.TaskID)">
                     <mat-icon item-width="15px">cancel</mat-icon> End Task</button>
                 </div>
               </div>
